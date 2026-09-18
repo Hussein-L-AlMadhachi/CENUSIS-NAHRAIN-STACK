@@ -1,0 +1,42 @@
+Academic Operations Information System
+======================================
+
+Project Overview
+----------------
+The Academic Operations Information System is a comprehensive backend solution designed to streamline
+and digitize the core academic processes of a university. It serves as a central hub for managing
+students, teaching staff, subjects, and the complex web of academic records that connects them. including 
+but not limited to coursework grades and attendance Built with a focus on data integrity and efficient
+administration, the system supports various user roles including Administrators, Super Admins, and Teachers.
+
+Key Features
+------------
+
+1. Student Administration
+   - **Profile Management**: Maintains detailed records for each student, including personal information, enrollment year, degree program, and current class level.
+   - **Academic Tracking**: Monitors student progress by tracking years retaken and years failed, providing a clear view of academic standing.
+   - **Search & Organization**: Offers robust tools to search for students by name (with fuzzy search capabilities) and filter them by degree or class.
+
+2. Course & Subject Management
+   - **Curriculum Definition**: Allows for the creation and management of subjects, specifying critical details such as total hours, weekly hours, semester placement, and attendance requirements.
+   - **Teacher Assignment**: Links subjects to specific teaching staff, ensuring clear accountability for course delivery.
+   - **Classification**: Organizes subjects based on degree programs and class levels.
+
+3. Academic Records ("Studying")
+   - **Enrollment & Performance**: Acts as the nexus between students, subjects, and teachers. It records enrollment and tracks performance metrics like coursework grades and final exam grades.
+   - **Attendance & Status**: Monitors student engagement through "hours missed" tracking and manages academic exceptions like exam retakes and semester retakes.
+
+4. Teaching Staff Management
+   - **Staff Profiles**: Manages profiles for professors and teachers.
+   - **Administrative Control**: Provides administrators with tools to register new staff, update profiles, and manage system access.
+
+5. Security & Access Control
+   - **Role-Based Access**: distinct privileges for Super Admins, Admins, and Teachers to ensure data security and operational integrity.
+   - **Authentication**: Secure login and session management for all users.
+
+Technical Architecture
+----------------------
+- **Backend Framework**: Node.js with Express, providing a robust and scalable server environment.
+- **Database**: PostgreSQL, leveraged for its reliability and relational data integrity, utilizing `pg-norm` for efficient database interactions.
+- **API Communication**: Implements a Remote Procedure Call (RPC) architecture using `enders-sync`, ensuring type-safe and efficient communication between the client and server.
+- **Language**: Written in TypeScript, ensuring code quality and maintainability through strong typing.

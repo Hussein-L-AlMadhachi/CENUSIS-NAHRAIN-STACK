@@ -1,0 +1,28 @@
+[ ] in absented.tsx use a checkbox select then apply absented hours to students
+[ ] db validation on hours per week vs entered hours (limit it to houres per week)
+[ ] abcense alert page for admin
+    [ ] divide by class and degree
+        [ ] display alerts repeated for each studying column (can be repeated per student)
+[ ] add abcense ratio to enrolled page with alert level
+[ ] implement soft delete teachers
+[ ] password reset for teachers
+[ ] replace edit button with remove in `enrolled page` since no students can be edited from there
+[ ] bulk delete studying relationships
+[ ] bukl update to all students
+[ ] remove unique constraint on subject name (normalized)
+[ ] add warning message that shows up to user when uploading students
+[ ] before students upload delete all students
+
+[ ] add export to excel for grades and subjects (in matric form)
+    - NOTE: do not export empty cells
+    - NOTE: you will have a master sheet for each class/degree
+
+[ ] rename to `نظام المقرر`
+
+[ ] display
+
+UI NOTE:
+    - For student upload it should be renamed to `Start New
+    - put upload student button in sidebar
+
+

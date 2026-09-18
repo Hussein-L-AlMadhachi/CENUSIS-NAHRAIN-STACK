@@ -1,0 +1,1114 @@
+Code Complexity Report - 2026-09-14 11:15:50
+Total functions with branches: 178
+
+   1. registerStudentsXlsxRoutes()
+      file: backend/src/routes/students_xlsx.php:104
+      complexity: 13.129999999999999
+      branches: 135.30000000000013
+      lines: 862
+
+   2. InPlaceEditableTable()
+      file: frontend/app/components/InPlaceEditableTable.tsx:31
+      complexity: 4.17
+      branches: 22.8
+      lines: 341
+
+   3. DynamicForm()
+      file: frontend/app/components/DynamicForm.tsx:44
+      complexity: 3.5
+      branches: 10.4
+      lines: 315
+
+   4. MainContent()
+      file: frontend/app/pages/admin/AbsenceAlerts.tsx:106
+      complexity: 3.0100000000000002
+      branches: 9.8
+      lines: 268
+
+   5. MainContent()
+      file: frontend/app/pages/superadmin/AbsenceAlerts.tsx:106
+      complexity: 3.0100000000000002
+      branches: 9.8
+      lines: 268
+
+   6. MainContent()
+      file: frontend/app/pages/superadmin/Subjects.tsx:136
+      complexity: 2.1599999999999997
+      branches: 2
+      lines: 209
+
+   7. EditableTable()
+      file: frontend/app/components/EditableTable.tsx:27
+      complexity: 2.09
+      branches: 7.4
+      lines: 184
+
+   8. MainContent()
+      file: frontend/app/pages/teacher/LabAttended.tsx:44
+      complexity: 2.0100000000000002
+      branches: 7
+      lines: 178
+
+   9. MainContent()
+      file: frontend/app/pages/teacher/Absented.tsx:44
+      complexity: 2.0100000000000002
+      branches: 7
+      lines: 178
+
+  10. newSubject()
+      file: backend/src/Features/subjects/subjects_service.php:421
+      complexity: 1.5699999999999998
+      branches: 17.400000000000002
+      lines: 99
+
+  11. updateSubject()
+      file: backend/src/Features/subjects/subjects_service.php:521
+      complexity: 1.52
+      branches: 14.400000000000002
+      lines: 104
+
+  12. AutocompleteText()
+      file: frontend/app/components/AutocompleteText.tsx:22
+      complexity: 1.21
+      branches: 5
+      lines: 104
+
+  13. MainLayout()
+      file: frontend/app/layout/MainLayout.tsx:26
+      complexity: 1.1400000000000001
+      branches: 1
+      lines: 111
+
+  14. dispatch()
+      file: backend/src/App.php:50
+      complexity: 1.08
+      branches: 12.4
+      lines: 67
+
+  15. MainContent()
+      file: frontend/app/pages/teacher/Studying.tsx:127
+      complexity: 1.09
+      branches: 5.1
+      lines: 92
+
+  16. Table()
+      file: frontend/app/components/Table.tsx:15
+      complexity: 1.08
+      branches: 3
+      lines: 98
+
+  17. MainContent()
+      file: frontend/app/pages/superadmin/Studying.tsx:131
+      complexity: 1.05
+      branches: 5.1
+      lines: 88
+
+  18. Options()
+      file: frontend/app/pages/admin/Students.tsx:31
+      complexity: 0.94
+      branches: 3.4
+      lines: 83
+
+  19. absented_mark_absent_bulk()
+      file: backend/src/Features/absented/absented_service.php:136
+      complexity: 0.91
+      branches: 5.1
+      lines: 74
+
+  20. MainContent()
+      file: frontend/app/pages/admin/GradingSystems.tsx:88
+      complexity: 0.89
+      branches: 1
+      lines: 86
+
+  21. MainContent()
+      file: frontend/app/pages/superadmin/GradingSystems.tsx:88
+      complexity: 0.89
+      branches: 1
+      lines: 86
+
+  22. handler()
+      file: backend/src/Rpc/Rpc.php:64
+      complexity: 0.8600000000000001
+      branches: 6
+      lines: 66
+
+  23. absented_mark_absent()
+      file: backend/src/Features/absented/absented_service.php:57
+      complexity: 0.86
+      branches: 3.8
+      lines: 73
+
+  24. Options()
+      file: frontend/app/pages/teacher/Grades.tsx:33
+      complexity: 0.83
+      branches: 3.4
+      lines: 72
+
+  25. Options()
+      file: frontend/app/pages/teacher/LabGrades.tsx:32
+      complexity: 0.83
+      branches: 3.4
+      lines: 72
+
+  26. recomputeAbsenceAlerts()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:264
+      complexity: 0.79
+      branches: 8.9
+      lines: 49
+
+  27. buildGradeTable()
+      file: frontend/app/helpers/grade_table.ts:10
+      complexity: 0.77
+      branches: 8.5
+      lines: 49
+
+  28. MainContent()
+      file: frontend/app/pages/admin/Studying.tsx:127
+      complexity: 0.76
+      branches: 2
+      lines: 69
+
+  29. createDailyAttendanceRecord()
+      file: backend/src/Features/attendance_record/attendance_record_service.php:126
+      complexity: 0.72
+      branches: 8.8
+      lines: 43
+
+  30. EnrollModal()
+      file: frontend/app/pages/teacher/Studying.tsx:63
+      complexity: 0.72
+      branches: 3.4
+      lines: 61
+
+  31. EnrollModal()
+      file: frontend/app/pages/superadmin/Studying.tsx:68
+      complexity: 0.72
+      branches: 3.4
+      lines: 61
+
+  32. EnrollModal()
+      file: frontend/app/pages/admin/Studying.tsx:63
+      complexity: 0.72
+      branches: 3.4
+      lines: 61
+
+  33. ModalPages()
+      file: frontend/app/components/ModalPages.tsx:15
+      complexity: 0.73
+      branches: 2
+      lines: 66
+
+  34. studying_fetch_absence_alerts()
+      file: backend/src/Features/studying/studying_service.php:303
+      complexity: 0.7
+      branches: 3
+      lines: 60
+
+  35. decodeXlsx()
+      file: backend/src/helpers/xlsx_codec.php:27
+      complexity: 0.6799999999999999
+      branches: 7.200000000000001
+      lines: 44
+
+  36. generateAuthValidatorForRoles()
+      file: backend/src/Auth/Auth.php:29
+      complexity: 0.63
+      branches: 6.6
+      lines: 41
+
+  37. students_import_data()
+      file: backend/src/Features/students/students_service.php:143
+      complexity: 0.61
+      branches: 5.1
+      lines: 44
+
+  38. LoginPage()
+      file: frontend/app/pages/LoginPage.tsx:9
+      complexity: 0.61
+      branches: 1
+      lines: 58
+
+  39. MainContent()
+      file: frontend/app/pages/superadmin/Absented.tsx:112
+      complexity: 0.61
+      branches: 1
+      lines: 58
+
+  40. MainContent()
+      file: frontend/app/pages/superadmin/Permissions.tsx:125
+      complexity: 0.6
+      branches: 1
+      lines: 57
+
+  41. MainContent()
+      file: frontend/app/pages/admin/Permissions.tsx:125
+      complexity: 0.6
+      branches: 1
+      lines: 57
+
+  42. AddPermissionEntryModal()
+      file: frontend/app/pages/superadmin/Permissions.tsx:69
+      complexity: 0.6000000000000001
+      branches: 2
+      lines: 53
+
+  43. AddPermissionEntryModal()
+      file: frontend/app/pages/admin/Permissions.tsx:69
+      complexity: 0.6000000000000001
+      branches: 2
+      lines: 53
+
+  44. attachGradeFieldsFetcherFallback()
+      file: frontend/app/rpc.ts:458
+      complexity: 0.5800000000000001
+      branches: 7.5
+      lines: 33
+
+  45. MainContent()
+      file: frontend/app/pages/teacher/Attendance.tsx:117
+      complexity: 0.5900000000000001
+      branches: 1
+      lines: 56
+
+  46. MainContent()
+      file: frontend/app/pages/superadmin/Attendance.tsx:116
+      complexity: 0.5900000000000001
+      branches: 1
+      lines: 56
+
+  47. MainContent()
+      file: frontend/app/pages/teacher/LabAttendance.tsx:107
+      complexity: 0.5900000000000001
+      branches: 1
+      lines: 56
+
+  48. markStudentAbsentBulk()
+      file: backend/src/Features/absented/absented_service.php:369
+      complexity: 0.58
+      branches: 6.800000000000001
+      lines: 35
+
+  49. registerTeacher()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:167
+      complexity: 0.58
+      branches: 4.4
+      lines: 43
+
+  50. updateEnrollment()
+      file: backend/src/Features/studying/studying_service.php:395
+      complexity: 0.55
+      branches: 6
+      lines: 35
+
+  51. grading_systems_validate_fields()
+      file: backend/src/Features/grading_system/grading_systems_service.php:185
+      complexity: 0.54
+      branches: 7.6
+      lines: 29
+
+  52. updateAbsenceAlertThreshold()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:216
+      complexity: 0.54
+      branches: 6.4
+      lines: 33
+
+  53. fetchDailyLabAttendanceRecordsForTheSubject()
+      file: backend/src/Features/attendance_record/attendance_record_service.php:200
+      complexity: 0.54
+      branches: 7.200000000000001
+      lines: 30
+
+  54. AddSubjectModal()
+      file: frontend/app/pages/admin/Subjects.tsx:144
+      complexity: 0.55
+      branches: 3.8
+      lines: 42
+
+  55. MainContent()
+      file: frontend/app/pages/superadmin/LabAttendance.tsx:37
+      complexity: 0.55
+      branches: 1
+      lines: 52
+
+  56. MainContent()
+      file: frontend/app/pages/teacher/LabGrades.tsx:111
+      complexity: 0.55
+      branches: 2
+      lines: 48
+
+  57. fetchDailyAttendanceRecordsForTheSubject()
+      file: backend/src/Features/attendance_record/attendance_record_service.php:170
+      complexity: 0.53
+      branches: 7.200000000000001
+      lines: 29
+
+  58. DatePicker()
+      file: frontend/app/components/DatePciker.tsx:13
+      complexity: 0.54
+      branches: 1
+      lines: 51
+
+  59. login()
+      file: backend/src/Auth/Auth.php:77
+      complexity: 0.49
+      branches: 3
+      lines: 39
+
+  60. MainContent()
+      file: frontend/app/pages/superadmin/LabAbsented.tsx:37
+      complexity: 0.48
+      branches: 1
+      lines: 45
+
+  61. AddAttendanceRecordModal()
+      file: frontend/app/pages/teacher/Attendance.tsx:73
+      complexity: 0.48
+      branches: 2
+      lines: 41
+
+  62. decode()
+      file: backend/src/Auth/Jwt.php:52
+      complexity: 0.47
+      branches: 5
+      lines: 30
+
+  63. useValidRoute()
+      file: frontend/app/hooks/useValidRoute.tsx:25
+      complexity: 0.46
+      branches: 5.800000000000001
+      lines: 27
+
+  64. AddAttendanceRecordModal()
+      file: frontend/app/pages/superadmin/Attendance.tsx:73
+      complexity: 0.47000000000000003
+      branches: 2
+      lines: 40
+
+  65. MainContent()
+      file: frontend/app/pages/superadmin/LabGrades.tsx:27
+      complexity: 0.45999999999999996
+      branches: 1
+      lines: 43
+
+  66. markStudentAbsent()
+      file: backend/src/Features/absented/absented_service.php:298
+      complexity: 0.45
+      branches: 4
+      lines: 32
+
+  67. subjects_resolve_grading_system_id()
+      file: backend/src/Features/subjects/subjects_service.php:387
+      complexity: 0.44999999999999996
+      branches: 4.8
+      lines: 29
+
+  68. AddAttendanceRecordModal()
+      file: frontend/app/pages/teacher/LabAttendance.tsx:65
+      complexity: 0.46
+      branches: 2
+      lines: 39
+
+  69. MainContent()
+      file: frontend/app/pages/teacher/Grades.tsx:112
+      complexity: 0.46
+      branches: 2
+      lines: 39
+
+  70. absented_update_absence()
+      file: backend/src/Features/absented/absented_service.php:254
+      complexity: 0.46
+      branches: 2
+      lines: 39
+
+  71. AddGradingSystemModal()
+      file: frontend/app/pages/admin/GradingSystems.tsx:45
+      complexity: 0.44999999999999996
+      branches: 1
+      lines: 42
+
+  72. AddGradingSystemModal()
+      file: frontend/app/pages/superadmin/GradingSystems.tsx:45
+      complexity: 0.44999999999999996
+      branches: 1
+      lines: 42
+
+  73. encodeXlsx()
+      file: backend/src/helpers/xlsx_codec.php:79
+      complexity: 0.44
+      branches: 3.4
+      lines: 33
+
+  74. AddStudentModal()
+      file: frontend/app/pages/superadmin/Students.tsx:76
+      complexity: 0.44
+      branches: 2.4
+      lines: 36
+
+  75. loggedin_users_fetch_after_auth()
+      file: backend/src/Features/loggedin_users/loggedin_users_service.php:155
+      complexity: 0.43000000000000005
+      branches: 4.4
+      lines: 28
+
+  76. AddSubjectModal()
+      file: frontend/app/pages/teacher/Subjects.tsx:74
+      complexity: 0.43
+      branches: 2.4
+      lines: 35
+
+  77. AddSubjectModal()
+      file: frontend/app/pages/superadmin/Subjects.tsx:98
+      complexity: 0.43
+      branches: 2.4
+      lines: 35
+
+  78. ThemeController()
+      file: frontend/app/components/ThemeController.tsx:4
+      complexity: 0.43000000000000005
+      branches: 1
+      lines: 40
+
+  79. AddAbsentStudentModal()
+      file: frontend/app/pages/superadmin/Absented.tsx:73
+      complexity: 0.43
+      branches: 2
+      lines: 36
+
+  80. AddTeacherModal()
+      file: frontend/app/pages/superadmin/Teachers.tsx:61
+      complexity: 0.43
+      branches: 2
+      lines: 36
+
+  81. AddTeacherModal()
+      file: frontend/app/pages/admin/Teachers.tsx:61
+      complexity: 0.43
+      branches: 2
+      lines: 36
+
+  82. load_config()
+      file: backend/cli/admin.php:36
+      complexity: 0.41000000000000003
+      branches: 6.1
+      lines: 21
+
+  83. AddStudentModal()
+      file: frontend/app/pages/admin/Students.tsx:143
+      complexity: 0.41000000000000003
+      branches: 2.4
+      lines: 33
+
+  84. absence_alert_thresholds_resolve_grading_system_id()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:166
+      complexity: 0.4
+      branches: 4.8
+      lines: 24
+
+  85. fetchSubjectsByTeacher()
+      file: backend/src/Features/subjects/subjects_service.php:725
+      complexity: 0.39
+      branches: 4.8
+      lines: 23
+
+  86. absented_remove_absence()
+      file: backend/src/Features/absented/absented_service.php:214
+      complexity: 0.39
+      branches: 1
+      lines: 36
+
+  87. grading_systems_update()
+      file: backend/src/Features/grading_system/grading_systems_service.php:79
+      complexity: 0.38
+      branches: 4.4
+      lines: 23
+
+  88. MainContent()
+      file: frontend/app/pages/superadmin/Grades.tsx:42
+      complexity: 0.38
+      branches: 1
+      lines: 35
+
+  89. loggedin_users_insert()
+      file: backend/src/Features/loggedin_users/loggedin_users_service.php:43
+      complexity: 0.36
+      branches: 3.4
+      lines: 25
+
+  90. newEnrollment()
+      file: backend/src/Features/studying/studying_service.php:368
+      complexity: 0.36
+      branches: 3
+      lines: 26
+
+  91. callableName()
+      file: backend/src/Rpc/Rpc.php:131
+      complexity: 0.35
+      branches: 4.4
+      lines: 20
+
+  92. encode()
+      file: backend/src/Auth/Jwt.php:22
+      complexity: 0.33999999999999997
+      branches: 3
+      lines: 24
+
+  93. absence_alert_thresholds_update()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:60
+      complexity: 0.33
+      branches: 3.4
+      lines: 22
+
+  94. grading_systems_insert()
+      file: backend/src/Features/grading_system/grading_systems_service.php:50
+      complexity: 0.33
+      branches: 3.4
+      lines: 22
+
+  95. updateUser()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:236
+      complexity: 0.34
+      branches: 2
+      lines: 27
+
+  96. AddThresholdModal()
+      file: frontend/app/pages/admin/AbsenceAlerts.tsx:75
+      complexity: 0.32999999999999996
+      branches: 1
+      lines: 30
+
+  97. AddThresholdModal()
+      file: frontend/app/pages/superadmin/AbsenceAlerts.tsx:75
+      complexity: 0.32999999999999996
+      branches: 1
+      lines: 30
+
+  98. absence_alert_thresholds_list_all_with_grading_system_name()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:113
+      complexity: 0.32999999999999996
+      branches: 1
+      lines: 30
+
+  99. validate_params()
+      file: backend/src/helpers/validate_params.php:13
+      complexity: 0.32
+      branches: 4.8
+      lines: 16
+
+ 100. translateHeaders()
+      file: backend/src/helpers/headers_translate.php:16
+      complexity: 0.31000000000000005
+      branches: 4.1
+      lines: 17
+
+ 101. loggedin_users_update()
+      file: backend/src/Features/loggedin_users/loggedin_users_service.php:101
+      complexity: 0.3
+      branches: 3.4
+      lines: 19
+
+ 102. students_update()
+      file: backend/src/Features/students/students_service.php:92
+      complexity: 0.3
+      branches: 3.4
+      lines: 19
+
+ 103. studying_update()
+      file: backend/src/Features/studying/studying_service.php:69
+      complexity: 0.3
+      branches: 3.4
+      lines: 19
+
+ 104. subjects_update()
+      file: backend/src/Features/subjects/subjects_service.php:98
+      complexity: 0.3
+      branches: 3.4
+      lines: 19
+
+ 105. teaching_staff_update()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:89
+      complexity: 0.3
+      branches: 3.4
+      lines: 19
+
+ 106. newAbsenceAlertThreshold()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:191
+      complexity: 0.31
+      branches: 2
+      lines: 24
+
+ 107. registerMeAsTeacher()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:356
+      complexity: 0.31
+      branches: 2
+      lines: 24
+
+ 108. useDebouncedState()
+      file: frontend/app/hooks/useDebouncedState.ts:5
+      complexity: 0.31
+      branches: 2
+      lines: 24
+
+ 109. getAccountInfo()
+      file: backend/src/Auth/Auth.php:132
+      complexity: 0.30000000000000004
+      branches: 2
+      lines: 23
+
+ 110. Modal()
+      file: frontend/app/components/Modal.tsx:9
+      complexity: 0.29
+      branches: 2.4
+      lines: 21
+
+ 111. flushCookies()
+      file: backend/src/Rpc/Response.php:70
+      complexity: 0.29
+      branches: 2.4
+      lines: 21
+
+ 112. SuperLabGradesPage()
+      file: frontend/app/pages/superadmin/LabGrades.tsx:71
+      complexity: 0.28
+      branches: 1
+      lines: 25
+
+ 113. attendance_record_insert()
+      file: backend/src/Features/attendance_record/attendance_record_service.php:33
+      complexity: 0.27
+      branches: 2.4
+      lines: 19
+
+ 114. ensureRootAccount()
+      file: backend/cli/admin.php:63
+      complexity: 0.27
+      branches: 1
+      lines: 24
+
+ 115. absence_alert_thresholds_insert()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:35
+      complexity: 0.26
+      branches: 2.4
+      lines: 18
+
+ 116. students_insert()
+      file: backend/src/Features/students/students_service.php:42
+      complexity: 0.26
+      branches: 2.4
+      lines: 18
+
+ 117. studying_insert()
+      file: backend/src/Features/studying/studying_service.php:44
+      complexity: 0.26
+      branches: 2.4
+      lines: 18
+
+ 118. subjects_insert()
+      file: backend/src/Features/subjects/subjects_service.php:60
+      complexity: 0.26
+      branches: 2.4
+      lines: 18
+
+ 119. teaching_staff_insert()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:39
+      complexity: 0.26
+      branches: 2.4
+      lines: 18
+
+ 120. changeSelfPassword()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:316
+      complexity: 0.26
+      branches: 2
+      lines: 19
+
+ 121. fetchAfterAuth()
+      file: backend/src/Auth/Auth.php:184
+      complexity: 0.26
+      branches: 2
+      lines: 19
+
+ 122. updateSelf()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:264
+      complexity: 0.25
+      branches: 1
+      lines: 22
+
+ 123. attachAccountInfoFallback()
+      file: frontend/app/rpc.ts:492
+      complexity: 0.25
+      branches: 2
+      lines: 18
+
+ 124. xlsx_number()
+      file: backend/src/routes/students_xlsx.php:85
+      complexity: 0.24000000000000002
+      branches: 3
+      lines: 14
+
+ 125. getProfile()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:287
+      complexity: 0.24000000000000002
+      branches: 2
+      lines: 17
+
+ 126. newStudent()
+      file: backend/src/Features/students/students_service.php:251
+      complexity: 0.24000000000000002
+      branches: 2
+      lines: 17
+
+ 127. updateAbsence()
+      file: backend/src/Features/absented/absented_service.php:351
+      complexity: 0.24000000000000002
+      branches: 2
+      lines: 17
+
+ 128. updateStudent()
+      file: backend/src/Features/students/students_service.php:269
+      complexity: 0.24000000000000002
+      branches: 2
+      lines: 17
+
+ 129. transaction()
+      file: backend/src/Db/Db.php:94
+      complexity: 0.22999999999999998
+      branches: 2.4
+      lines: 15
+
+ 130. fetchSubjectsByLabTeacher()
+      file: backend/src/Features/subjects/subjects_service.php:749
+      complexity: 0.23
+      branches: 2
+      lines: 16
+
+ 131. fetchTeachers()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:339
+      complexity: 0.23
+      branches: 2
+      lines: 16
+
+ 132. autocompleteGradingSystem()
+      file: backend/src/Features/grading_system/grading_systems_service.php:294
+      complexity: 0.22
+      branches: 2
+      lines: 15
+
+ 133. autocompleteStudent()
+      file: backend/src/Features/students/students_service.php:340
+      complexity: 0.22
+      branches: 2
+      lines: 15
+
+ 134. autocompleteStudentsBySubject()
+      file: backend/src/Features/subjects/subjects_service.php:709
+      complexity: 0.22
+      branches: 2
+      lines: 15
+
+ 135. autocompleteSubject()
+      file: backend/src/Features/subjects/subjects_service.php:679
+      complexity: 0.22
+      branches: 2
+      lines: 15
+
+ 136. autocompleteTeacher()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:384
+      complexity: 0.22
+      branches: 2
+      lines: 15
+
+ 137. login()
+      file: frontend/app/pages/LoginPage.tsx:22
+      complexity: 0.19
+      branches: 1
+      lines: 16
+
+ 138. fetchAttendanceRecordWithSubject()
+      file: backend/src/Features/attendance_record/attendance_record_service.php:231
+      complexity: 0.19
+      branches: 2
+      lines: 12
+
+ 139. subjects_resolve_has_lab_flag()
+      file: backend/src/Features/subjects/subjects_service.php:368
+      complexity: 0.19
+      branches: 2
+      lines: 12
+
+ 140. grading_systems_normalize_payload()
+      file: backend/src/Features/grading_system/grading_systems_service.php:222
+      complexity: 0.18
+      branches: 1
+      lines: 15
+
+ 141. parseCookies()
+      file: frontend/app/hooks/useValidRoute.tsx:4
+      complexity: 0.18
+      branches: 1
+      lines: 15
+
+ 142. loose_validate_params()
+      file: backend/src/helpers/validate_params.php:36
+      complexity: 0.16999999999999998
+      branches: 2.4
+      lines: 9
+
+ 143. useValidParams()
+      file: frontend/app/hooks/useValidParams.tsx:3
+      complexity: 0.16999999999999998
+      branches: 2.4
+      lines: 9
+
+ 144. subjects_ensure_allowed_keys()
+      file: backend/src/Features/subjects/subjects_service.php:356
+      complexity: 0.16
+      branches: 2.4
+      lines: 8
+
+ 145. send()
+      file: backend/src/Rpc/Response.php:51
+      complexity: 0.16
+      branches: 1
+      lines: 13
+
+ 146. deleteUser()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:223
+      complexity: 0.15
+      branches: 1
+      lines: 12
+
+ 147. newGradingSystem()
+      file: backend/src/Features/grading_system/grading_systems_service.php:242
+      complexity: 0.15
+      branches: 1
+      lines: 12
+
+ 148. fetchSingleEnrollment()
+      file: backend/src/Features/studying/studying_service.php:436
+      complexity: 0.14
+      branches: 1
+      lines: 11
+
+ 149. fetchSingleGradingSystem()
+      file: backend/src/Features/grading_system/grading_systems_service.php:268
+      complexity: 0.14
+      branches: 1
+      lines: 11
+
+ 150. fetchSingleSubject()
+      file: backend/src/Features/subjects/subjects_service.php:631
+      complexity: 0.14
+      branches: 1
+      lines: 11
+
+ 151. fetchStudentInfo()
+      file: backend/src/Features/students/students_service.php:292
+      complexity: 0.14
+      branches: 1
+      lines: 11
+
+ 152. noRpcAuth()
+      file: backend/src/Auth/Auth.php:204
+      complexity: 0.14
+      branches: 1
+      lines: 11
+
+ 153. switchTheme()
+      file: frontend/app/components/ThemeController.tsx:9
+      complexity: 0.14
+      branches: 1
+      lines: 11
+
+ 154. add()
+      file: backend/src/Rpc/Rpc.php:43
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 155. changeTeacherPassword()
+      file: backend/src/Features/teaching_staff/teaching_staff_service.php:305
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 156. fetchAbsentStudents()
+      file: backend/src/Features/absented/absented_service.php:331
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 157. fetchEnrollmentsForSubject()
+      file: backend/src/Features/studying/studying_service.php:448
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 158. fetchGradingSystems()
+      file: backend/src/Features/grading_system/grading_systems_service.php:280
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 159. fetchStudents()
+      file: backend/src/Features/students/students_service.php:304
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 160. fetchSubjects()
+      file: backend/src/Features/subjects/subjects_service.php:643
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 161. filterStudentsByClassDegree()
+      file: backend/src/Features/students/students_service.php:315
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 162. filterStudentsByDegree()
+      file: backend/src/Features/students/students_service.php:326
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 163. filterSubjectsByClassDegree()
+      file: backend/src/Features/subjects/subjects_service.php:654
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 164. filterSubjectsByDegree()
+      file: backend/src/Features/subjects/subjects_service.php:665
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 165. findGradingSystemByName()
+      file: backend/src/Features/grading_system/grading_systems_service.php:310
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 166. findStudentByName()
+      file: backend/src/Features/students/students_service.php:356
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 167. findSubjectByName()
+      file: backend/src/Features/subjects/subjects_service.php:695
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 168. normalize_arabic()
+      file: backend/src/helpers/normalize_arabic.php:50
+      complexity: 0.13
+      branches: 1
+      lines: 10
+
+ 169. absence_alert_thresholds_normalize_percent()
+      file: backend/src/Features/absence_alert_thresholds/absence_alert_thresholds_service.php:153
+      complexity: 0.12
+      branches: 1
+      lines: 9
+
+ 170. grading_systems_decode_row()
+      file: backend/src/Features/grading_system/grading_systems_service.php:34
+      complexity: 0.12
+      branches: 1
+      lines: 9
+
+ 171. studying_decode_row()
+      file: backend/src/Features/studying/studying_service.php:144
+      complexity: 0.12
+      branches: 1
+      lines: 9
+
+ 172. b64urlDecode()
+      file: backend/src/Auth/Jwt.php:88
+      complexity: 0.11
+      branches: 1
+      lines: 8
+
+ 173. loggedin_users_hash_password()
+      file: backend/src/Features/loggedin_users/loggedin_users_service.php:27
+      complexity: 0.11
+      branches: 1
+      lines: 8
+
+ 174. parseJsonBody()
+      file: backend/src/App.php:136
+      complexity: 0.11
+      branches: 1
+      lines: 8
+
+ 175. removeAbsence()
+      file: backend/src/Features/absented/absented_service.php:342
+      complexity: 0.11
+      branches: 1
+      lines: 8
+
+ 176. run()
+      file: backend/src/App.php:41
+      complexity: 0.11
+      branches: 1
+      lines: 8
+
+ 177. secret()
+      file: backend/src/Auth/Jwt.php:97
+      complexity: 0.11
+      branches: 1
+      lines: 8
+
+ 178. instance()
+      file: backend/src/Db/Db.php:39
+      complexity: 0.1
+      branches: 1
+      lines: 7
+
+Class Bloat Report
+
+   1. Auth
+      file: backend/src/Auth/Auth.php:16
+      score: 0.86 (OK)
+      methods: 9  attributes: 0  lines: 200
+      fan-in: 0 callers from 0 files  fan-out: 0
+
+   2. Rpc
+      file: backend/src/Rpc/Rpc.php:19
+      score: 0.8 (OK)
+      methods: 6  attributes: 0  lines: 133
+      fan-in: 0 callers from 0 files  fan-out: 0
+
+   3. App
+      file: backend/src/App.php:16
+      score: 0.76 (OK)
+      methods: 7  attributes: 0  lines: 129
+      fan-in: 0 callers from 0 files  fan-out: 0
+
+   4. Jwt
+      file: backend/src/Auth/Jwt.php:17
+      score: 0.66 (OK)
+      methods: 5  attributes: 0  lines: 89
+      fan-in: 0 callers from 0 files  fan-out: 0
+
+   5. Db
+      file: backend/src/Db/Db.php:17
+      score: 0.53 (OK)
+      methods: 7  attributes: 0  lines: 93
+      fan-in: 0 callers from 0 files  fan-out: 0
+
+   6. Response
+      file: backend/src/Rpc/Response.php:11
+      score: 0.51 (OK)
+      methods: 7  attributes: 0  lines: 81
+      fan-in: 0 callers from 0 files  fan-out: 0
+
+   7. Metadata
+      file: backend/src/Rpc/Metadata.php:11
+      score: 0.23 (OK)
+      methods: 1  attributes: 0  lines: 17
+      fan-in: 0 callers from 0 files  fan-out: 0

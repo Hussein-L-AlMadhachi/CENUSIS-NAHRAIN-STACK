@@ -1,0 +1,23 @@
+{
+    "name": "cenusis/operations-backend",
+    "description": "CENUSIS Operations backend (PHP, enders-sync wire protocol)",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "ext-pdo_mysql": "*",
+        "phpoffice/phpspreadsheet": "^2.1 || ^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cenusis\\": "src/"
+        },
+        "files": [
+            "src/helpers/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

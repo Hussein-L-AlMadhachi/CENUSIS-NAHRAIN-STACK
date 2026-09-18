@@ -1,0 +1,5 @@
+.env
+.bots.json
+.default_accounts.json
+dist/
+vendor/
