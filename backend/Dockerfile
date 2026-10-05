@@ -8,8 +8,9 @@ RUN apk add --no-cache \
         oniguruma-dev \
         libpng-dev \
         libjpeg-turbo-dev \
-        freetype-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+        freetype-dev
+
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install pdo_mysql gd zip mbstring
 
 WORKDIR /app
