@@ -21,6 +21,7 @@ services:
   backend:
     build:
       context: .
+      network: host
       dockerfile: backend/Dockerfile
     container_name: cenusis-backend
     restart: unless-stopped
