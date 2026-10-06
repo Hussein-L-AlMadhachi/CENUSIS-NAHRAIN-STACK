@@ -4,10 +4,10 @@
 #   php backend/cli/create.php
 #
 # Usage:
-#   BASE=http://127.0.0.1:3001 DB_HOST=127.0.0.1 DB_USER=root DB_PASSWORD=secret bash test/integration.sh
+#   BASE=http://127.0.0.1:4000 DB_HOST=127.0.0.1 DB_USER=root DB_PASSWORD=secret bash test/integration.sh
 set -uo pipefail
 
-BASE="${BASE:-http://127.0.0.1:3001}"
+BASE="${BASE:-http://127.0.0.1:4000}"
 BACKEND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TEST_TAG="${TEST_TAG:-$$}"
 COOKIES_ADMIN="$(mktemp)"

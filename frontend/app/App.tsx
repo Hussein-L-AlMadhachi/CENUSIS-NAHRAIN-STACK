@@ -3,6 +3,7 @@ import type { JSX } from "react";
 
 
 import { LoginPage } from "@/pages/LoginPage";
+import { ChangePasswordPage } from "@/pages/ChangePasswordPage";
 
 import { TeachersPage } from "@/pages/admin/Teachers";
 import { StudentsPage } from "@/pages/admin/Students";
@@ -48,6 +49,7 @@ export default function App(): JSX.Element {
         <Switch>
             <Route path="/" component={LoginPage} />
             <Route path="/login" component={LoginPage} />
+            <Route path="/change-password" component={ChangePasswordPage} />
             <Route path="/admin/teachers" component={TeachersPage} />
             <Route path="/admin/students" component={StudentsPage} />
             <Route path="/admin/subjects" component={SubjectsPage} />

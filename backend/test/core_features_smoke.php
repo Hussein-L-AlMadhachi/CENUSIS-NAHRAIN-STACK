@@ -16,7 +16,10 @@ require_once __DIR__ . '/../src/Rpc/Response.php';
 require_once __DIR__ . '/../src/Rpc/Rpc.php';
 require_once __DIR__ . '/../src/Db/Db.php';
 require_once __DIR__ . '/../src/DI.php';
+require_once __DIR__ . '/../src/Auth/Jwt.php';
+require_once __DIR__ . '/../src/Auth/Auth.php';
 
+use Cenusis\Auth\Auth;
 use Cenusis\Rpc\Metadata;
 use Cenusis\Rpc\Rpc;
 
@@ -131,9 +134,9 @@ if ($hasDriver) {
 }
 
 expect_error(
-    static fn () => changeSelfPassword(new Metadata(['user_id' => 1, 'role' => 'superadmin']), '1234567890'),
-    'You need to be loggedin to change your password',
-    'changeSelfPassword auth.id parity with TS'
+    static fn () => Auth::changeSelfPassword(new Metadata(['role' => 'admin']), '1234567890'),
+    'You need to be logged in to change your password',
+    'changeSelfPassword requires user_id'
 );
 
 // --- 3. loggedin_users helpers -------------------------------------------

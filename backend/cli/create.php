@@ -60,6 +60,7 @@ $tables = [
             username VARCHAR(100) NOT NULL,
             normalized_username VARCHAR(150) UNIQUE NOT NULL,
             password_hash VARCHAR(255) NOT NULL,
+            must_change_password TINYINT(1) NOT NULL DEFAULT 0,
             role VARCHAR(20) NOT NULL
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
         SQL,

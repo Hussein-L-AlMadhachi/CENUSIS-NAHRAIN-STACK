@@ -10,7 +10,7 @@ Requirements: PHP 8.2+ with `pdo_mysql`, `json`, `mbstring` extensions.
 ```sh
 cd backend
 composer install        # generates vendor/autoload.php
-php -S localhost:3000 public/index.php
+php -S localhost:4000 public/index.php
 ```
 
 If `composer` is not installed, `public/index.php` falls back to a minimal
@@ -34,7 +34,7 @@ cp .env.example .env   # edit values
 docker compose up --build
 ```
 
-The backend container runs PHP-FPM with nginx (port 3000 exposed),
+The backend container runs PHP-FPM with nginx (port 4000 exposed),
 front controller `public/index.php`.
 
 ## Structure

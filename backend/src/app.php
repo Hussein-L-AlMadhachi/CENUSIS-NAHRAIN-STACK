@@ -31,6 +31,9 @@ function create_app(): App
     $publicRPC->add(static fn ($metadata, $username, $password) => Auth::login($metadata, $username, $password), 'login');
     $publicRPC->add(static fn ($metadata) => Auth::logout($metadata), 'logout');
 
+    $changePasswordRPC = $app->rpc('/api/change-password', Auth::generateAuthValidatorForAnyRole());
+    $changePasswordRPC->add(static fn ($metadata, $newPassword) => Auth::changeSelfPassword($metadata, $newPassword), 'changeSelfPassword');
+
     $adminRPC = $app->rpc('/api/admin', Auth::generateAuthValidatorForRoles('admin'));
     registerAdminCoreHandlers($adminRPC);
     registerAbsenceAlertHandlers($adminRPC);
@@ -41,7 +44,6 @@ function create_app(): App
     registerAbsenceAlertHandlers($superRPC);
     registerTeacherAttendanceHandlers($superRPC);
     $superRPC->add(static fn ($metadata) => Auth::getAccountInfo($metadata), 'getAccountInfo');
-    $superRPC->add('changeSelfPassword', 'changeSelfPassword');
     $superRPC->add(static fn ($metadata) => Auth::logout($metadata), 'logout');
 
     $teachersRPC = $app->rpc('/api/teacher', Auth::generateAuthValidatorForRoles('teacher'));

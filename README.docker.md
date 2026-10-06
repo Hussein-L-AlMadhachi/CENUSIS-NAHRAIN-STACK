@@ -18,13 +18,13 @@ docker-compose up -d
 
 This will:
 - Start MySQL database on port 3306
-- Build and start the PHP backend on port 3000
+- Build and start the PHP backend on port 4000
 - Build and start the React frontend with nginx on port 80
 
 ### 2. Access the Application
 
 - **Frontend**: http://localhost
-- **Backend API**: http://localhost:3000
+- **Backend API**: http://localhost:4000
 - **MySQL**: localhost:3306
 
 ### 3. Initialize the Database
@@ -38,6 +38,11 @@ docker-compose exec backend php ./cli/create.php
 # Create an admin user
 docker-compose exec backend php ./cli/admin.php
 ```
+
+The admin script seeds `admin` and `superadmin` accounts with the default
+password `change-me-123` (override with the `DEFAULT_ADMIN_PASSWORD` and
+`DEFAULT_SUPERADMIN_PASSWORD` environment variables). These accounts are forced
+to change their password on first login.
 
 ## Individual Service Commands
 
@@ -177,7 +182,7 @@ docker-compose exec frontend cat /etc/nginx/conf.d/default.conf
 docker-compose ps backend
 
 # Test backend directly
-curl http://localhost:3000/api/public
+curl http://localhost:4000/api/public
 ```
 
 ### Database initialization fails
@@ -195,7 +200,7 @@ docker-compose exec backend php ./cli/create.php
 
 ### Port conflicts
 
-If ports 80, 3000, or 3306 are already in use, modify `docker-compose.yml`:
+If ports 80, 4000, or 3306 are already in use, modify `docker-compose.yml`:
 
 ```yaml
 services:
@@ -204,7 +209,7 @@ services:
       - "8080:80"  # Change host port to 8080
   backend:
     ports:
-      - "3001:3000"  # Change host port to 3001
+      - "4001:4000"  # Change host port to 4001
   mysql:
     ports:
       - "3307:3306"  # Change host port to 3307
@@ -270,7 +275,7 @@ docker system prune -a
 │  Nginx (Frontend)│
 │  React App      │
 └────────┬────────┘
-         │ /api/* → :3000
+         │ /api/* → :4000
          ▼
 ┌─────────────────┐
 │  PHP Backend   │

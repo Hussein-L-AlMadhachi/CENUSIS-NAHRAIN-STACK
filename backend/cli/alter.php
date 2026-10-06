@@ -42,6 +42,7 @@ function column_exists(PDO $pdo, string $table, string $column): bool
  * @var list<array{0:string,1:string,2:string}> $alterations [table, column, DDL fragment]
  */
 $alterations = [
+    ['loggedin_users', 'must_change_password', '`must_change_password` TINYINT(1) NOT NULL DEFAULT 0'],
     ['studying', 'exam_retakes', '`exam_retakes` INT DEFAULT 0'],
     ['studying', 'semester_retakes', '`semester_retakes` INT DEFAULT 0'],
     ['studying', 'is_attending_required', '`is_attending_required` TINYINT(1) DEFAULT 1'],

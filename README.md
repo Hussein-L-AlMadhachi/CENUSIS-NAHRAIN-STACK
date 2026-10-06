@@ -35,7 +35,7 @@ git clone https://github.com/Hussein-L-AlMadhachi/CENUSIS-Operations.git
 ```
 
 ```bash
-cd CENUSIS-Operations
+cd CENUSIS-NAHRAIN-STACK
 ```
 
 Download the latest docker image release from [releases](https://github.com/Hussein-L-AlMadhachi/CENUSIS-Ops/releases) and upload it to the server using ssh
@@ -60,18 +60,23 @@ now our database is empty. to create the tables inside it
 docker-compose exec backend php /app/cli/create.php
 ```
 
-to create default admin and superadmin accounts
-you need to create file called `.default_accounts.json` then upload it to server.
-then you have to copy it to `backend` container using this command:
-
-```bash
-sudo docker cp .default_accounts.json backend:/app/cli/.default_accounts.json
-```
-
-then create the accounts in the database using:
+to create default admin and superadmin accounts, run:
 ```bash
 sudo docker-compose exec backend php /app/cli/admin.php
 ```
+
+This creates two accounts with the default password `change-me-123`:
+
+| username     | default password |
+|--------------|------------------|
+| `admin`      | `change-me-123`  |
+| `superadmin` | `change-me-123`  |
+
+> You can override the default passwords by setting the `DEFAULT_ADMIN_PASSWORD`
+> and `DEFAULT_SUPERADMIN_PASSWORD` environment variables on the backend
+> container before running the command.
+
+These accounts are forced to change their password on first login.
 
 now you can navigate to the servers ip on your local network and access the platform
 

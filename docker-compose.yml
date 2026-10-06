@@ -34,7 +34,7 @@ services:
       DB_USER: ${DB_USER:-dev}
       DB_PASSWORD: ${DB_PASSWORD:-dev123456}
     ports:
-      - "3000:3000"
+      - "4000:4000"
     depends_on:
       mysql:
         condition: service_healthy

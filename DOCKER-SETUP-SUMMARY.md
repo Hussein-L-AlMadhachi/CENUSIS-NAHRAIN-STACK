@@ -44,6 +44,11 @@ docker-compose exec backend php ./cli/admin.php
 open http://localhost
 ```
 
+The admin script seeds `admin` and `superadmin` accounts with the default
+password `change-me-123` (override via `DEFAULT_ADMIN_PASSWORD` /
+`DEFAULT_SUPERADMIN_PASSWORD`). These accounts are forced to change their
+password on first login.
+
 ### Option 2: Build for Distribution
 
 ```bash
@@ -72,7 +77,7 @@ tar -czf cenusis-v1.0.0.tar.gz docker-images/ docker-compose.yml README.docker.m
 │  - Serves React static files                │
 │  - Proxies /api/* to backend                │
 └──────────────────┬──────────────────────────┘
-                   │ /api/* → :3000
+                   │ /api/* → :4000
                    ▼
 ┌─────────────────────────────────────────────┐
 │        PHP (Backend Container)              │
@@ -94,7 +99,7 @@ tar -czf cenusis-v1.0.0.tar.gz docker-images/ docker-compose.yml README.docker.m
 | Service    | Port | Description                          |
 |------------|------|--------------------------------------|
 | Frontend   | 80   | React app served by nginx            |
-| Backend    | 3000 | PHP API server                       |
+| Backend    | 4000 | PHP API server                       |
 | MySQL      | 3306 | Database server                      |
 
 ## 🔧 Common Commands
@@ -174,7 +179,7 @@ Before deploying to production:
 
 4. **Configure Firewall:**
    - Only expose port 80/443 publicly
-   - Keep ports 3000 and 3306 internal
+   - Keep ports 4000 and 3306 internal
 
 ## 🐛 Troubleshooting
 
@@ -185,7 +190,7 @@ docker-compose logs
 
 # Check if ports are in use
 sudo lsof -i :80
-sudo lsof -i :3000
+sudo lsof -i :4000
 sudo lsof -i :3306
 ```
 
@@ -248,7 +253,7 @@ docker-compose up -d --build
 
 3. **Access the application:**
    - Frontend: http://localhost
-   - Backend API: http://localhost:3000/api
+   - Backend API: http://localhost:4000/api
 
 4. **For production deployment:**
    - Review security checklist in `README.docker.md`

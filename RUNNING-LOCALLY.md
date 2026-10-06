@@ -34,20 +34,22 @@ Expected output: all 12 tables `[OK]`, followed by `Tables created successfully`
 
 ## 3. Create the admin accounts (once)
 
-Create a file named `.default_accounts.json` in the repository root
-(it is gitignored, so it stays local):
-
-```json
-{
-    "admin": { "username": "admin", "password": "change-me-123" },
-    "superadmin": { "username": "superadmin", "password": "change-me-123" }
-}
-```
-
-Then run:
+Run:
 
 ```bash
 DB_HOST=127.0.0.1 DB_PORT=3306 DB_USER=root DB_PASSWORD=123456 DB_NAME=cenusis_ops \
+php backend/cli/admin.php
+```
+
+This seeds two accounts with the default password `change-me-123`:
+`admin` and `superadmin`.
+
+You can override the default passwords with the `DEFAULT_ADMIN_PASSWORD` and
+`DEFAULT_SUPERADMIN_PASSWORD` environment variables:
+
+```bash
+DB_HOST=127.0.0.1 DB_PORT=3306 DB_USER=root DB_PASSWORD=123456 DB_NAME=cenusis_ops \
+DEFAULT_ADMIN_PASSWORD=my-secret DEFAULT_SUPERADMIN_PASSWORD=my-secret \
 php backend/cli/admin.php
 ```
 
@@ -58,7 +60,8 @@ Expected output:
  [DONE]  SUPERADMIN user is ready (id:X)
 ```
 
-> Passwords must be at least 8 characters.
+> Passwords must be at least 8 characters. These accounts are forced to change
+> their password on first login.
 
 ## 4. Install backend dependencies (once)
 
@@ -80,7 +83,7 @@ cd /home/hussein/Repos/CENUSIS-Operations
 
 DB_HOST=127.0.0.1 DB_PORT=3306 DB_USER=root DB_PASSWORD=123456 DB_NAME=cenusis_ops \
 JWT_SECRET=any-long-random-string \
-php -S 0.0.0.0:3000 backend/public/index.php
+php -S 0.0.0.0:4000 backend/public/index.php
 ```
 
 If you prefer to run from inside `backend/`, use the path relative to it:
@@ -89,7 +92,7 @@ If you prefer to run from inside `backend/`, use the path relative to it:
 cd backend
 DB_HOST=127.0.0.1 DB_PORT=3306 DB_USER=root DB_PASSWORD=123456 DB_NAME=cenusis_ops \
 JWT_SECRET=any-long-random-string \
-php -S 0.0.0.0:3000 public/index.php
+php -S 0.0.0.0:4000 public/index.php
 ```
 
 > Wrong directory + relative path gives a per-request fatal like
@@ -102,21 +105,21 @@ Notes:
 - `JWT_SECRET` is **required** — without it, login authenticates but fails with
   `Error creating token`.
 - Defaults inside Docker are `DB_HOST=mysql`, so pass `DB_HOST=127.0.0.1` locally.
-- The server listens on port 3000, which is what the frontend expects.
+- The server listens on port 4000, which is what the frontend expects.
 
 ## 6. Sanity-check the backend
 
 ```bash
 # should return ["login","logout"]
-curl http://localhost:3000/api/public/discover
+curl http://localhost:4000/api/public/discover
 
 # should return {"success":false,"error":"Unauthorized"}
-curl -X POST http://localhost:3000/api/public/call \
+curl -X POST http://localhost:4000/api/public/call \
   -H 'Content-Type: application/json' \
   -d '{"method":"login","params":["admin","wrong-password"]}'
 
-# should return {"success":true,"data":{...,"role":"admin"}}
-curl -c /tmp/cookies.txt -X POST http://localhost:3000/api/public/call \
+# should return {"success":true,"data":{...,"role":"admin","must_change_password":true}}
+curl -c /tmp/cookies.txt -X POST http://localhost:4000/api/public/call \
   -H 'Content-Type: application/json' \
   -d '{"method":"login","params":["admin","change-me-123"]}'
 ```
@@ -128,7 +131,7 @@ cd frontend
 bun run dev     # or: npm run dev
 ```
 
-Vite automatically proxies `/api/*` to `http://localhost:3000`
+Vite automatically proxies `/api/*` to `http://localhost:4000`
 (already configured in `frontend/vite.config.ts`).
 
 Open Vite's URL (usually `http://localhost:5173`) and log in with the admin
@@ -144,6 +147,8 @@ account from step 3.
 | `DB_USER`      | `root`             | `dev`          | Database user                  |
 | `DB_PASSWORD`  | `123456`           | `dev123456`    | Database password              |
 | `JWT_SECRET`   | any random string  | set in compose | JWT signing key (required)     |
+| `DEFAULT_ADMIN_PASSWORD`      | `change-me-123` | `change-me-123` | Default admin password (seeded)    |
+| `DEFAULT_SUPERADMIN_PASSWORD` | `change-me-123` | `change-me-123` | Default superadmin password (seeded) |
 
 ## Schema changes / re-runs
 
@@ -164,8 +169,8 @@ export DB_HOST=127.0.0.1 DB_PORT=3306 DB_USER=root DB_PASSWORD=123456 \
 php backend/test/core_features_smoke.php
 php backend/test/ownership_idor_test.php
 
-# HTTP integration suite (backend must be running on :3000)
-BASE=http://127.0.0.1:3001 bash backend/test/integration.sh
+# HTTP integration suite (backend must be running on :4000)
+BASE=http://127.0.0.1:4000 bash backend/test/integration.sh
 ```
 
 ## Troubleshooting
@@ -177,4 +182,4 @@ BASE=http://127.0.0.1:3001 bash backend/test/integration.sh
 | `SQLSTATE[HY000] [1049] Unknown database` | run `php backend/cli/create.php` first |
 | `SQLSTATE[HY000] [2002] ... mysql` | you forgot `DB_HOST=127.0.0.1` (defaults to the Docker hostname `mysql`) |
 | Class `PhpOffice\...` not found on XLSX routes | run `php composer.phar install` in `backend/` |
-| Port 3000 already in use | an old `php -S` instance, `pkill -f 'php -S'` |
+| Port 4000 already in use | an old `php -S` instance, `pkill -f 'php -S'` |

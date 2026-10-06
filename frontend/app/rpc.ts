@@ -5,6 +5,12 @@ import { RPC } from "enders-sync-client";
 interface Loggedin {
     user_id: string;
     role: string;
+    must_change_password: boolean;
+}
+
+interface ChangePasswordRPC {
+    load(): Promise<void>;
+    changeSelfPassword(newPassword: string): Promise<void>;
 }
 
 export interface AccountInfo {
@@ -183,7 +189,6 @@ interface AdminsRPC {
     // teachers accounts management
     updateUser(id: string, data: teacherData): Promise<number>;
     deleteUser(id: number): Promise<void>;
-    changeSelfPassword(password: string): Promise<void>;
     changeTeacherPassword(id: string, password: string): Promise<void>;
     fetchTeachers(): Promise<teacherData[]>;
     autocompleteTeacher(name: string): Promise<string[]>;
@@ -265,7 +270,6 @@ interface TeachersRPC {
     // teachers accounts management
     updateUser(id: string, data: teacherData): Promise<number>;
     deleteUser(id: number): Promise<void>;
-    changeSelfPassword(password: string): Promise<void>;
     changeTeacherPassword(id: string, password: string): Promise<void>;
     fetchTeachers(): Promise<teacherData[]>;
     autocompleteTeacher(name: string): Promise<string[]>;
@@ -346,7 +350,6 @@ interface SuperAdminRPC {
     // teachers accounts management
     updateUser(id: string, data: teacherData): Promise<number>;
     deleteUser(id: number): Promise<void>;
-    changeSelfPassword(password: string): Promise<void>;
     changeTeacherPassword(id: string, password: string): Promise<void>;
     fetchTeachers(): Promise<teacherData[]>;
     autocompleteTeacher(name: string): Promise<string[]>;
@@ -434,6 +437,7 @@ interface SuperAdminRPC {
 
 
 export const publicRPC = new RPC('/api/public') as unknown as PublicRPC;
+export const changePasswordRPC = new RPC('/api/change-password') as unknown as ChangePasswordRPC;
 export const adminRPC = new RPC('/api/admin') as unknown as AdminsRPC;
 
 
@@ -510,6 +514,7 @@ function attachAccountInfoFallback(client: AccountInfoFallbackClient) {
 
 export async function initializeRPC() {
   await publicRPC.load();
+  await changePasswordRPC.load();
   await adminRPC.load();
   await superAdminRPC.load();
   await teacherRPC.load();

@@ -338,26 +338,6 @@ function changeTeacherPassword(Metadata $metadata, int $id, string $new_password
     return $uid;
 }
 
-function changeSelfPassword(Metadata $metadata, string $new_password)
-{
-    // NOTE: mirrors TS, which reads metadata.auth.id, the auth validator only
-    // ever sets user_id, so this throws unless that field exists. Kept for
-    // behavior parity with the TS backend.
-    $authId = $metadata->auth['id'] ?? null;
-
-    if (!is_int($authId)) {
-        throw new Exception('You need to be loggedin to change your password');
-    }
-
-    $uid = loggedin_users_update_password($authId, $new_password);
-
-    if (!$uid) {
-        throw new Exception("couldn't find user");
-    }
-
-    return $uid;
-}
-
 /**
  * @return array<int, string>
  */

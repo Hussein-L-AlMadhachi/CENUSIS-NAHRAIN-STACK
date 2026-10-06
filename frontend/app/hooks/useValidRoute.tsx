@@ -27,7 +27,14 @@ export function useValidRoute(
 ) {
     const [, navigate] = useLocation();
 
-    const current_user_role = parseCookies()["auth-role"];
+    const cookies = parseCookies();
+
+    if (cookies["must-change-password"]) {
+        navigate("/change-password");
+        return;
+    }
+
+    const current_user_role = cookies["auth-role"];
 
     if (current_user_role === null) {
         navigate(login_page);

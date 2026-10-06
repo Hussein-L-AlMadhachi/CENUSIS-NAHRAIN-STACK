@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useLocation } from "wouter";
 import { publicRPC } from "../rpc";
 import { useGetRoleFirstPageURL } from "../hooks/useGetRoleFirstPageURL";
 
@@ -13,7 +14,8 @@ export function LoginPage() {
     const [is_loading, setIsLoading] = useState<boolean>(false);
     const [error_msg, setErrorMsg] = useState<string>("");
 
-    const navigate = useGetRoleFirstPageURL({
+    const [, navigate] = useLocation();
+    const navigateToRoleHome = useGetRoleFirstPageURL({
         "admin": "/admin/teachers",
         "teacher": "/teacher/subjects",
         "superadmin": "/superadmin/teachers"
@@ -21,14 +23,20 @@ export function LoginPage() {
 
     async function login() {
         setIsLoading(true);
-        const data = await publicRPC.login(username, password);
-
-        // Expires in one hour (3600 seconds) just like the JWT token
-        document.cookie = `auth-role=${data.role}; max-age=3600;`;
-
-        navigate(data.role);
+        setErrorMsg("");
 
         try {
+            const data = await publicRPC.login(username, password);
+
+            // Expires in one hour (3600 seconds) just like the JWT token
+            document.cookie = `auth-role=${data.role}; max-age=3600; path=/;`;
+
+            if (data.must_change_password) {
+                document.cookie = `must-change-password=1; max-age=3600; path=/;`;
+                navigate("/change-password");
+            } else {
+                navigateToRoleHome(data.role);
+            }
         } catch {
             setErrorMsg("اسم المستخدم وكلمة السر غير صحيحين.")
         } finally {

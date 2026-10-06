@@ -1,4 +1,4 @@
-# Backend Dockerfile, PHP 8.3 FPM + nginx on port 3000
+# Backend Dockerfile, PHP 8.3 FPM + nginx on port 4000
 FROM php:8.3-fpm-alpine
 
 # Composer from the official image, so it runs on THIS PHP (8.3)
@@ -34,7 +34,7 @@ RUN composer dump-autoload --optimize --no-dev
 
 COPY backend/docker/nginx.conf /etc/nginx/http.d/default.conf
 
-EXPOSE 3000
+EXPOSE 4000
 
 # php-fpm in background, nginx in foreground
 CMD ["sh", "-c", "php-fpm -D && exec nginx -g 'daemon off;'"]

@@ -83,7 +83,7 @@ echo ""
 # Check HTTP endpoints
 echo -e "${BLUE}Checking HTTP Endpoints:${NC}"
 check_http "Frontend (Port 80)" "http://localhost"
-check_http "Backend API" "http://localhost:3000/api/public"
+check_http "Backend API" "http://localhost:4000/api/public"
 echo ""
 
 # Check disk usage

@@ -13,6 +13,10 @@ docker-compose exec backend php ./cli/create.php
 docker-compose exec backend php ./cli/admin.php
 ```
 
+> The admin script seeds `admin` and `superadmin` with the default password
+> `change-me-123` (override via `DEFAULT_ADMIN_PASSWORD` /
+> `DEFAULT_SUPERADMIN_PASSWORD`). They must change their password on first login.
+
 Access the app at: **http://localhost**
 
 ---
@@ -141,7 +145,7 @@ docker-compose exec backend php ./cli/admin.php
 ```bash
 # Check what's using the port
 sudo lsof -i :80
-sudo lsof -i :3000
+sudo lsof -i :4000
 sudo lsof -i :3306
 
 # Change ports in docker-compose.yml
@@ -183,7 +187,7 @@ docker-compose up -d --build
 ## Access Points
 
 - **Frontend**: http://localhost
-- **Backend API**: http://localhost:3000/api
+- **Backend API**: http://localhost:4000/api
 - **MySQL**: localhost:3306
 
 ---

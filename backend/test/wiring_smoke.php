@@ -218,8 +218,9 @@ $teacherAttendanceHandlers = [
 
 $discoverExpectations = [
     '/api/public/discover' => ['login', 'logout'],
+    '/api/change-password/discover' => ['changeSelfPassword'],
     '/api/admin/discover' => array_merge($adminCore, $absenceAlertHandlers, ['getAccountInfo']),
-    '/api/superadmin/discover' => array_merge($adminCore, $absenceAlertHandlers, $teacherAttendanceHandlers, ['getAccountInfo', 'changeSelfPassword', 'logout']),
+    '/api/superadmin/discover' => array_merge($adminCore, $absenceAlertHandlers, $teacherAttendanceHandlers, ['getAccountInfo', 'logout']),
     '/api/teacher/discover' => array_merge($adminCore, $teacherAttendanceHandlers, ['getAccountInfo', 'logout']),
 ];
 
